@@ -1,6 +1,6 @@
 public class ComputerDirector {
 
-    public Computer constructPerformanceLaptop(ComputerBuilder builder) {
+    public Computer constructGamingLaptop(ComputerBuilder builder) {
         return builder.setCpu("AMD Ryzen 7")
                 .setGpu("NVIDIA RTX 4050")
                 .setRam("16GB DDR5")
@@ -8,11 +8,12 @@ public class ComputerDirector {
                 .build();
     }
 
-    public Computer constructOfficePc(ComputerBuilder builder) {
-        return builder.setCpu("Intel Core i3")
-                .setGpu("Integrated Intel UHD")
-                .setRam("8GB DDR4")
-                .setStorage("256GB SSD")
+    public Computer constructHeavyDesktop(ComputerBuilder builder) {
+        return builder.setCpu("Intel Core i9")
+                .setGpu("RTX 4090 (Heavy GPU)")
+                .setRam("32GB DDR5")
+                .setStorage("2TB NVMe SSD")
+                .setGlassPanel(true)
                 .build();
     }
 }
