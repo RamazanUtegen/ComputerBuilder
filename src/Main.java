@@ -3,18 +3,11 @@ public class Main {
         ComputerDirector director = new ComputerDirector();
 
         ComputerBuilder laptopBuilder = new LaptopBuilder();
+        Computer laptop = director.constructGamingLaptop(laptopBuilder);
+        System.out.println("Result 1: " + laptop);
 
-        Computer myLaptop = director.constructPerformanceLaptop(laptopBuilder);
-
-        System.out.println("Building first PC:");
-        System.out.println(myLaptop.toString());
-
-        System.out.println("\n-------------------\n");
-
-        ComputerBuilder officeBuilder = new LaptopBuilder();
-        Computer officePc = director.constructOfficePc(officeBuilder);
-
-        System.out.println("Building second PC:");
-        System.out.println(officePc.toString());
+        ComputerBuilder desktopBuilder = new DesktopBuilder();
+        Computer desktop = director.constructHeavyDesktop(desktopBuilder);
+        System.out.println("Result 2: " + desktop);
     }
 }
