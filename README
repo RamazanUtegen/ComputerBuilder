@@ -1,0 +1,15 @@
+Assignment 1 - Builder Pattern
+
+Project Description
+This is my submission for the Software Design Patterns assignment. I chose a custom topic: a Computer Assembly system. The Builder pattern is a great fit here because computers have many optional components (CPU, GPU, RAM, glass side panels), and putting all of them into one giant constructor would be messy and hard to read.
+
+Concrete Builders Used
+I implemented two builders to show different representations of a computer:
+- `LaptopBuilder`: Used to create portable PCs. It automatically sets the form factor to "Laptop" and ignores features like glass side panels.
+- `DesktopBuilder`: Used for full-sized PCs. It allows deeper customization, like adding a glass panel and supporting large, heavy GPUs.
+How to Run the Code
+1. Open the project in IntelliJ IDEA.
+2. Navigate to the `src` folder and open `Main.java`.
+3. Run the `main` method.
+4. Check the console output to see the details of the assembled gaming laptop and desktop PC.
+4. Check the console output to see the details of the assembled gaming laptop and desktop PC.
