@@ -3,34 +3,15 @@ public class LaptopBuilder implements ComputerBuilder {
 
     public LaptopBuilder() {
         this.computer = new Computer();
+        this.computer.setFormFactor("Laptop"); // Жестко задаем форм-фактор
+        this.computer.setGlassPanel(false);
     }
 
-    @Override
-    public ComputerBuilder setCpu(String cpu) {
-        computer.setCpu(cpu);
-        return this;
-    }
+    @Override public ComputerBuilder setCpu(String cpu) { computer.setCpu(cpu); return this; }
+    @Override public ComputerBuilder setGpu(String gpu) { computer.setGpu(gpu); return this; }
+    @Override public ComputerBuilder setRam(String ram) { computer.setRam(ram); return this; }
+    @Override public ComputerBuilder setStorage(String storage) { computer.setStorage(storage); return this; }
+    @Override public ComputerBuilder setGlassPanel(boolean hasGlassPanel) { return this; } // Игнорируем
 
-    @Override
-    public ComputerBuilder setGpu(String gpu) {
-        computer.setGpu(gpu);
-        return this;
-    }
-
-    @Override
-    public ComputerBuilder setRam(String ram) {
-        computer.setRam(ram);
-        return this;
-    }
-
-    @Override
-    public ComputerBuilder setStorage(String storage) {
-        computer.setStorage(storage);
-        return this;
-    }
-
-    @Override
-    public Computer build() {
-        return this.computer;
-    }
+    @Override public Computer build() { return this.computer; }
 }
