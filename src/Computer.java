@@ -1,4 +1,6 @@
+// Product: A class representing the complex object being built
 public class Computer {
+    // Meaningful, intention-revealing names for variables (Clean Code principle)
     private String cpu;
     private String gpu;
     private String ram;

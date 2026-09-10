@@ -1,5 +1,7 @@
+// Director: Orchestrates the build sequence for known configurations
 public class ComputerDirector {
 
+    // Centralizes construction logic to prevent code duplication (DRY principle)
     public Computer constructGamingLaptop(ComputerBuilder builder) {
         return builder.setCpu("AMD Ryzen 7")
                 .setGpu("NVIDIA RTX 4050")
